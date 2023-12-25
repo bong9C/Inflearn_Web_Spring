@@ -7,14 +7,14 @@ import org.junit.jupiter.api.Test;
 
 import java.util.List;
 import java.util.Optional;
-
+// 테스트는 순서와 관계없이 의존 관계 없이 설계 되어야 하고 테스트 후 기록을 깔끔하게 지워줘야함.
 class MemoryMemberRepositoryTest {
 
     MemoryMemberRepository repository = new MemoryMemberRepository();
 
     @AfterEach
     public void afterEach(){
-        repository.clearStore(); // 테스트가 한번씩 실행 되고 난 후 깨끗하게 클리어
+        repository.clearStore(); // 테스트가 한번씩 실행 되고 난 후 깨끗하게 기록 클리어
     }
 
     @Test
